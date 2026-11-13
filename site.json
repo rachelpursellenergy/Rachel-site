@@ -1,0 +1,68 @@
+{
+  "site": {
+    "name": "Rachel Pursell",
+    "url": "https://rachelpursell.com",
+    "title": "Rachel Pursell | Intuitive Energy Healer",
+    "description": "Intuitive energy healing with your guides, for people and animals, from anywhere. Healings start at $44.",
+    "year": "2026",
+    "legalUpdated": "November 13, 2026"
+  },
+
+  "contact": {
+    "email": "connect@rachelpursell.com",
+    "phone": "REMOVED",
+    "address": "REMOVED"
+  },
+
+  "links": {
+    "youtube": "https://www.youtube.com/@RachelPursell",
+    "instagram": "https://www.instagram.com/rachelpursellenergy/",
+    "tiktok": "https://www.tiktok.com/@rachelpursellenergy",
+    "calendly": "https://calendly.com/rachelpursell/book",
+    "stripe": "https://buy.stripe.com/dRm28s4Vwg5O8jC3NI9MY00"
+  },
+
+  "sections": {
+    "videos": false,
+    "kindWords": false
+  },
+
+  "services": {
+    "async": {
+      "name": "Intuitive Energy Healing",
+      "price": "44",
+      "minutes": "20",
+      "badge": "Audio, sent to you",
+      "who": "people or animals",
+      "deliveryHours": "48"
+    },
+    "live": {
+      "name": "Live Intuitive Energy Healing",
+      "price": "77",
+      "minutes": "40",
+      "badge": "Live on Zoom",
+      "who": "people only",
+      "rescheduleHours": "24"
+    }
+  },
+
+  "videos": [
+    { "id": "PASTE_YOUTUBE_VIDEO_ID_1", "title": "A short healing" },
+    { "id": "PASTE_YOUTUBE_VIDEO_ID_2", "title": "Another healing" }
+  ],
+
+  "testimonials": [
+    { "quote": "Paste a kind word here.", "name": "First name, which healing" },
+    { "quote": "Paste another kind word here.", "name": "First name, which healing" },
+    { "quote": "Paste a third kind word here.", "name": "First name, which healing" }
+  ],
+
+  "tools": [
+    { "name": "Stripe", "use": "Payments" },
+    { "name": "Calendly", "use": "Booking" },
+    { "name": "Zoom", "use": "Live healings" },
+    { "name": "Netlify", "use": "Hosting and the contact form" },
+    { "name": "Google Fonts", "use": "The fonts on this site" },
+    { "name": "YouTube", "use": "Videos", "onlyWhen": "videos" }
+  ]
+}
