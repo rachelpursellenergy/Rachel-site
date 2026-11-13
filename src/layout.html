@@ -1,14 +1,59 @@
-rachel-site/
-  netlify.toml
-  site.json
-  build.mjs
-  src/
-    layout.html
-    index.html
-    terms.html
-    privacy.html
-    style.css
-    form.js
-    images/
-      hero.jpg      (your first photo)
-      about.jpg     (your second photo)
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{page.title}}</title>
+<meta name="description" content="{{page.desc}}">
+<link rel="canonical" href="{{site.url}}{{page.url}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{page.title}}">
+<meta property="og:description" content="{{page.desc}}">
+<meta property="og:url" content="{{site.url}}{{page.url}}">
+<meta name="theme-color" content="#FBF6EE">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232B2A4C'/%3E%3Cpath d='M12 3C12.8 8.5 15.5 11.2 21 12C15.5 12.8 12.8 15.5 12 21C11.2 15.5 8.5 12.8 3 12C8.5 11.2 11.2 8.5 12 3Z' fill='%23D9B26F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="page">
+<header class="nav">
+<div class="wrap">
+<a class="logo" href="/">{{site.name}}</a>
+{{#if page.home}}
+<nav class="nav-links" aria-label="Main">
+<a href="#how">How it works</a>
+<a href="#healings">Healings</a>
+<a href="#about">About</a>
+<a href="#faq">FAQ</a>
+<a class="btn btn-sm" href="#healings">Choose a healing</a>
+</nav>
+{{else}}
+<nav class="nav-links" aria-label="Main"><a href="/">Back to home</a></nav>
+{{/if}}
+</div>
+</header>
+<main id="main">
+<!--CONTENT-->
+</main>
+<footer class="footer">
+<div class="wrap">
+<div class="row">
+<span class="name">{{site.name}}</span>
+<nav aria-label="Footer">
+{{#if page.home}}{{else}}<a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a>{{/if}}
+<a href="{{links.youtube}}" target="_blank" rel="noopener">YouTube</a>
+<a href="{{links.tiktok}}" target="_blank" rel="noopener">TikTok</a>
+<a href="{{links.instagram}}" target="_blank" rel="noopener">Instagram</a>
+</nav>
+</div>
+<p>Healings are not medical care. Please keep seeing your doctor or vet. © {{site.year}} {{site.name}}</p>
+</div>
+</footer>
+</div>
+<script src="/form.js" defer></script>
+</body>
+</html>
