@@ -1,0 +1,215 @@
+/* Rachel Pursell site styles */
+:root{
+  --cream:#FBF6EE; --sand:#F2E8DA; --night:#2B2A4C; --body:#3F3D63; --muted:#5C5A7A;
+  --apricot:#F2B27A; --lavender:#B8B0E6; --tint:#E4E0F5; --tint2:#ECE8F6; --gold:#D9B26F; --violet:#6B5FB5;
+  --line:#EADFCF; --line2:#D9D5E8; --peach:#F7DDC4;
+  --wrap:clamp(1120px,62vw,1400px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);font-family:'DM Sans',system-ui,sans-serif;color:var(--body);font-size:17px;line-height:1.55}
+img,svg,iframe{max-width:100%}
+a{color:var(--violet)}
+a:hover{color:var(--night)}
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--night);color:#fff;padding:10px 16px;border-radius:8px;z-index:10}
+.skip:focus{left:8px}
+.page{background:var(--cream)}
+
+/* layout */
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+.sec{padding-block:clamp(64px,9vw,120px)}
+.bg-cream{background:var(--cream)} .bg-sand{background:var(--sand)} .bg-night{background:var(--night)}
+.stack{display:flex;flex-direction:column}
+.split{display:flex;flex-wrap:wrap;align-items:center;gap:56px}
+.split>*{min-width:0}
+.head{display:flex;flex-direction:column;gap:16px;max-width:640px}
+
+/* text */
+.eyebrow{font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.on-night .eyebrow{color:var(--gold)}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;color:var(--night);margin:0}
+h1{font-size:clamp(40px,4.45vw,80px);line-height:1.08}
+h2{font-size:clamp(32px,4vw,40px);line-height:1.15}
+h3{font-size:24px;line-height:1.25}
+p{margin:0}
+.lead{font-size:18px;line-height:1.6}
+.small{font-size:15px;color:var(--muted)}
+.on-night h2,.on-night h3{color:var(--cream)}
+.on-night p{color:#E6E2F2}
+.on-night .small{color:#C9C5E0}
+
+/* buttons and links */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;border-radius:999px;font-weight:500;font-size:17px;text-decoration:none;font-family:inherit;border:0;cursor:pointer;background:var(--apricot);color:var(--night)}
+.btn:hover{filter:brightness(.96);color:var(--night)}
+.btn-dark{background:var(--night);color:var(--cream)}
+.btn-dark:hover{color:var(--cream);filter:brightness(1.2)}
+.btn-outline{background:transparent;border:1.5px solid var(--night)}
+.btn-sm{min-height:44px;padding:0 22px;font-size:16px}
+.link{font-size:17px;font-weight:500;color:var(--night);text-decoration:underline;text-underline-offset:4px}
+
+/* nav */
+.nav{background:var(--cream);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-block:20px}
+.logo{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:24px;color:var(--night);text-decoration:none}
+.nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:28px}
+.nav-links a:not(.btn){font-size:16px;color:var(--body);text-decoration:none}
+.nav-links a:not(.btn):hover{color:var(--violet)}
+
+/* hero */
+.hero{overflow:hidden;padding-block:clamp(48px,7vw,96px)}
+.hero .copy{flex:1 1 480px;display:flex;flex-direction:column;gap:24px}
+.hero .sub{font-size:20px;line-height:1.55;max-width:520px}
+.hero .price{font-size:17px;font-weight:500;color:var(--night)}
+.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin-top:8px}
+.creds{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:16px;padding-top:24px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+.hero .art{flex:1 1 340px;position:relative;display:flex;justify-content:center;min-height:460px}
+.hero .sun{position:absolute;top:-20px;right:0;width:300px;height:300px;border-radius:50%;background:var(--peach)}
+.hero .constellation{position:absolute;left:-10px;bottom:10px;width:360px;height:220px}
+.arch{position:relative;width:100%;max-width:400px;aspect-ratio:4/5;border-radius:999px 999px 28px 28px;background:var(--tint);overflow:hidden}
+.arch img,.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.arch img{object-position:50% 28%}
+.photo{flex:1 1 340px;max-width:460px;aspect-ratio:4/5;border-radius:28px;background:var(--tint);overflow:hidden}
+.photo img{object-position:50% 42%}
+
+/* how it works */
+.how{position:relative;overflow:hidden}
+.how .stars{position:absolute;inset:0;width:100%;height:100%}
+.how .wrap{position:relative}
+.steps{display:flex;flex-wrap:wrap;gap:40px 32px;margin-top:56px}
+.step{flex:1 1 220px;display:flex;flex-direction:column;gap:16px}
+.step .n{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-size:22px}
+.how .note{margin-top:56px}
+
+/* what you get */
+.get{display:flex;flex-wrap:wrap;align-items:flex-start;gap:56px}
+.get>*{min-width:0}
+.get .left{flex:1 1 380px;display:flex;flex-direction:column;gap:20px}
+.get .item{display:flex;gap:16px;align-items:flex-start;font-size:18px;line-height:1.5}
+.get .item svg{flex:none;margin-top:2px}
+.get .item strong{color:var(--night)}
+.card-sand{flex:1 1 380px;background:var(--sand);border-radius:28px;padding:36px;display:flex;flex-direction:column;gap:20px}
+.bg-sand .card-sand{background:var(--cream)}
+.quote{font-family:'Fraunces',Georgia,serif;font-size:22px;line-height:1.45;color:var(--night)}
+.play{display:flex;align-items:center;gap:16px}
+.play .dot{width:56px;height:56px;border-radius:50%;background:var(--apricot);display:flex;align-items:center;justify-content:center;flex:none}
+.play .bar{flex:1;height:6px;border-radius:3px;background:#D9CDB9}
+
+/* healings */
+.offers{display:flex;flex-wrap:wrap;gap:32px;align-items:stretch;margin-top:48px}
+.offer{flex:1 1 440px;min-width:0;background:#FFFDF9;border:1px solid #E8DCCB;border-radius:28px;padding:40px;display:flex;flex-direction:column;gap:20px}
+.offer h3{font-size:28px;line-height:1.2}
+.offer .btn{margin-top:auto;align-self:flex-start}
+.badge{align-self:flex-start;padding:6px 14px;border-radius:999px;background:var(--tint);color:var(--night);font-size:14px;font-weight:500}
+.pricerow{display:flex;align-items:baseline;flex-wrap:wrap;gap:12px}
+.pricerow .big{font-family:'Fraunces',Georgia,serif;font-size:56px;line-height:1;color:var(--night)}
+.pricerow span:last-child{font-size:17px;color:var(--muted)}
+
+/* about */
+.about .text{flex:1 1 440px;display:flex;flex-direction:column;gap:20px}
+
+/* videos and kind words */
+.videos{display:flex;flex-wrap:wrap;gap:24px;margin-top:48px}
+.video{flex:1 1 420px;aspect-ratio:16/9;border-radius:24px;overflow:hidden;background:var(--night)}
+.video iframe{width:100%;height:100%;border:0;display:block}
+.words{display:flex;flex-wrap:wrap;gap:24px;margin-top:40px}
+.word{flex:1 1 300px;background:#FFFDF9;border:1px solid #E8DCCB;border-radius:24px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.bg-sand .word{background:var(--cream)}
+.word p{font-family:'Fraunces',Georgia,serif;font-size:20px;line-height:1.45;color:var(--body)}
+
+/* tips */
+.tips{display:flex;flex-wrap:wrap;gap:24px;margin:48px 0}
+.tip{flex:1 1 320px;border:1px solid #4A4875;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px}
+.tip h3{font-size:22px}
+
+/* faq */
+.faq{display:flex;flex-wrap:wrap;gap:40px 56px;margin-top:48px}
+.faq .col{flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:32px}
+.faq .q{display:flex;flex-direction:column;gap:8px;padding-bottom:32px;border-bottom:1px solid var(--line)}
+.faq .q:last-child{padding-bottom:0;border-bottom:0}
+.faq h3{font-size:22px;line-height:1.3}
+
+/* contact */
+.contact .wrap{max-width:720px;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
+.contact .sec-pad{padding-block:clamp(64px,9vw,104px)}
+form.contact-form{width:100%;display:flex;flex-direction:column;gap:16px;margin-top:8px;text-align:left}
+label{display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:500;color:var(--night)}
+input[type=text],input[type=email],textarea{font:inherit;font-size:17px;font-weight:400;color:var(--body);border-radius:14px;border:1px solid #D9CDB9;background:#FFFDF9;padding:0 16px;height:52px;width:100%}
+textarea{height:auto;padding:14px 16px;resize:vertical}
+.contact-form .btn{align-self:center;padding:0 36px}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.form-msg{border-radius:14px;padding:16px 20px;font-size:17px;text-align:left;width:100%}
+.form-msg.ok{background:var(--tint2);color:var(--night)}
+.form-msg.bad{background:#FBE3C8;color:var(--night)}
+
+/* footer */
+.footer{background:var(--night)}
+.footer .wrap{padding-block:48px;display:flex;flex-direction:column;gap:20px}
+.footer .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.footer .name{font-family:'Fraunces',Georgia,serif;font-size:22px;color:var(--cream)}
+.footer nav{display:flex;flex-wrap:wrap;gap:12px 28px;font-size:15px}
+.footer a{color:#E6E2F2}
+.footer a:hover{color:#fff}
+.footer p{font-size:14px;line-height:1.5;color:#C9C5E0}
+
+/* legal pages */
+.legal{max-width:960px;margin:0 auto;padding:56px 32px 96px;display:flex;flex-direction:column;gap:40px}
+.legal-top{display:flex;flex-direction:column;gap:20px}
+.legal h1{font-size:clamp(30px,3.4vw,40px);line-height:1.1}
+.legal .doc-head{display:flex;flex-direction:column;gap:16px;padding-bottom:36px}
+.legal .doc-head .kicker{font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--violet)}
+.legal .doc-head h2{font-size:clamp(36px,4.4vw,52px);line-height:1.08}
+.legal .bar{width:56px;height:4px;border-radius:2px;background:var(--violet)}
+.legal .doc{scroll-margin-top:24px}
+.legal .doc+.doc{padding-top:48px}
+.clause{display:flex;flex-wrap:wrap;gap:20px 48px;padding:32px 0;border-top:1px solid var(--line2)}
+.clause .label{flex:0 0 220px;display:flex;flex-direction:column;gap:6px}
+.clause .num{font-size:14px;letter-spacing:.1em;color:var(--muted)}
+.clause h3{font-size:24px;line-height:1.2}
+.clause .body{flex:1 1 400px;min-width:0;display:flex;flex-direction:column;gap:16px;font-size:17px;line-height:1.65}
+.clause ul{margin:0;padding-left:24px;display:flex;flex-direction:column;gap:10px}
+.lilac{background:var(--tint2);border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:6px;line-height:1.6}
+.lilac .t{font-size:22px;font-family:'Fraunces',Georgia,serif;font-weight:500;color:var(--night)}
+.lilac .t.xl{font-size:30px;line-height:1.2}
+.lilac .k{font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.lilac .li{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 24px;padding:16px 0;border-bottom:1px solid #D2CCE6}
+.lilac .li:last-child{border-bottom:0}
+.lilac .li .t{font-size:20px}
+.lilac .li .price{font-size:30px;font-family:'Fraunces',Georgia,serif;font-weight:500;color:var(--night)}
+.caps{font-weight:700}
+
+/* ---------- screen sizes ---------- */
+@media (min-width:2000px){
+  body{font-size:18px}
+  .lead{font-size:20px}
+}
+@media (max-width:760px){
+  .wrap{padding:0 20px}
+  .nav-links a:not(.btn){display:none}
+  .nav .wrap{padding-block:14px}
+  .hero .sub{font-size:18px}
+  .hero .art{min-height:0}
+  .hero .sun{width:200px;height:200px;top:-10px}
+  .hero .constellation{display:none}
+  .split{gap:40px}
+  .offer{padding:28px}
+  .pricerow .big{font-size:48px}
+  .card-sand{padding:24px}
+  .quote{font-size:20px}
+  .legal{padding:40px 20px 72px}
+  .clause .label{flex:1 1 100%}
+}
+@media (max-width:420px){
+  .btn{width:100%}
+  .hero .actions{flex-direction:column;align-items:stretch;text-align:center}
+  .nav .btn{width:auto}
+  .contact-form .btn{width:100%}
+}
+
+/* Surface Duo and other two screen devices, when the page is spread across both screens */
+@media (horizontal-viewport-segments:2){
+  .split{column-gap:calc(env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0) + 64px)}
+  .get{column-gap:calc(env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0) + 64px)}
+  .step,.tip,.offer{flex-basis:300px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
