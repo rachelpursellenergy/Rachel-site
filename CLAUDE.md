@@ -12,6 +12,8 @@ the technical work for her where you can.
   Content changes usually go here, not in the HTML.
 - `build.mjs` fills the templates from `site.json` and writes `dist/`.
   Run it with `node build.mjs`. `dist/` is never committed.
+  Node 20 is installed locally with Homebrew (`brew install node@20`), the
+  same version Netlify uses.
 - `netlify.toml` tells Netlify to run `node build.mjs` and publish `dist`
   (Node 20) and sets the security headers.
 
