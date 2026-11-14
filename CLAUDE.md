@@ -24,7 +24,8 @@ the technical work for her where you can.
   `gh` is installed with Homebrew (`/opt/homebrew/bin/gh`) and signed in as
   `rachelpursellenergy`. If `gh` is not found, add `/opt/homebrew/bin` to PATH.
 - Netlify: project `rachelpursell`, site id `9c44ef36-83f8-468c-99bd-db8fd65c6ad0`,
-  live at https://rachelpursell.netlify.app (custom domain: rachelpursell.com).
+  live at https://rachelpursell.netlify.app (custom domain: rachelpursell.com, DNS at Squarespace Domains; keep the
+  Google Workspace MX/TXT records when changing DNS).
   Use the Netlify connector for read-only checks (project, deploys).
 - Forms are not enabled on the Netlify project yet. Turn them on before
   relying on any contact form.
@@ -38,6 +39,10 @@ the technical work for her where you can.
   upload before linking.
 
 ## Workflow
+
+0. Git identity is `Rachel Pursell <connect@rachelpursell.com>` (set globally).
+   Never use a hostname-based email. Do not add a phone number or street
+   address to the site or repo; they were deliberately removed.
 
 1. Never work directly on `main` for anything beyond a tiny fix. Make a branch
    (`git switch -c short-description`), commit there, and open a PR with `gh pr create`.
